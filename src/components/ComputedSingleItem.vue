@@ -1,11 +1,15 @@
 <script setup>
 defineProps(['modelValue', 'label'])
-defineEmits(['update:modelValue'])
+const emit  = defineEmits(['update:modelValue'])
+
+const updateModelvalue = (value) => {
+    emit('update:modelValue', value)
+}
 </script>
 <template>
     <label for="name">{{ label }}</label>
     <input type="text" name="name" id="name" 
     :value="modelValue" 
-    @input="$emit('update:modelValue', $event.target.value)">
+    @input="updateModelvalue($event.target.value)">
 </template>
 <style></style>
