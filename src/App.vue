@@ -18,7 +18,8 @@ import SingleItem from './components/SingleItem.vue';
     {{ person.name }} is {{ person.age }} years old and works as a {{ person.occupation }}.
   </p>
   <Person :person="person" />
-  <SingleItem :name="person.name" />
+  <!-- <SingleItem :name="person.name" /> -->
+  <SingleItem v-model="person.name"  />
 </section>
 </template>
 

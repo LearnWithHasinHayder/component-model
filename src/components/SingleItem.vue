@@ -1,5 +1,6 @@
 <script setup>
-defineProps(['name'])
+defineProps(['modelValue'])
+defineEmits(['update:modelValue'])
 </script>
 <template>
     <p class="my-5">
@@ -9,7 +10,7 @@ defineProps(['name'])
     <p>
     <form action="" class="flex flex-col">
         <label for="name">Name</label>
-        <input type="text" name="name" id="name" :value="name">
+        <input type="text" name="name" id="name" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)">
     </form>
     </p>
 </template>
