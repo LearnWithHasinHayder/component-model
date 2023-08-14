@@ -8,6 +8,7 @@ const person = reactive({
 
 import Person from './components/Person.vue';
 import SingleItem from './components/SingleItem.vue';
+import SingleItemX from './components/SingleItemX.vue';
 </script>
 
 <template>
@@ -20,6 +21,7 @@ import SingleItem from './components/SingleItem.vue';
   <Person :person="person" />
   <!-- <SingleItem :name="person.name" /> -->
   <SingleItem v-model="person.name"  />
+  <SingleItemX v-model:name="person.name"  />
 </section>
 </template>
 
