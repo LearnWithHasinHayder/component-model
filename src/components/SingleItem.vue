@@ -5,7 +5,7 @@ defineEmits(['update:modelValue'])
 <template>
     <p class="my-5">
         <h2 class="text-xl">Single Item</h2>
-        name is {{ name }} 
+        name is {{ modelValue }} 
     </p>
     <p>
     <form action="" class="flex flex-col">
